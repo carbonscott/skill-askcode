@@ -18,4 +18,6 @@ fi
 export UV_CACHE_DIR="${UV_CACHE_DIR:-/tmp/uv-cache-$USER}"
 
 # User overrides last
-[ -f "$SKILL_DIR/env.local" ] && source "$SKILL_DIR/env.local"
+if [ -f "$SKILL_DIR/env.local" ]; then
+    source "$SKILL_DIR/env.local"
+fi
